@@ -5,10 +5,8 @@
     </el-col>
     <el-col :sapn="12">
       <el-menu
-        :default-active="activeIndex2"
         class="right-item"
         mode="horizontal"
-        @select="handleSelect"
         background-color="#373d41"
         text-color="#fff"
         active-text-color="#fff">

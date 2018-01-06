@@ -4,6 +4,7 @@
       background-color="#333744"
       text-color="#fff"
       active-text-color="#fff"
+      :router="true"
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse">
@@ -15,9 +16,9 @@
           <i class="el-icon-setting"></i>
           <span slot="title">系统设置</span>
         </template>
-        <el-menu-item index="1-1">用户管理</el-menu-item>
-        <el-menu-item index="1-2">角色管理</el-menu-item>
-        <el-menu-item index="1-3">菜单权限</el-menu-item>
+        <el-menu-item index="/user">用户管理</el-menu-item>
+        <el-menu-item index="/role">角色管理</el-menu-item>
+        <el-menu-item index="/menu">菜单权限</el-menu-item>
       </el-submenu>
       <el-menu-item index="2">
         <i class="el-icon-menu"></i>

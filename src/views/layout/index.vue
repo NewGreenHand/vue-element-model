@@ -7,20 +7,29 @@
       <el-aside>
         <Sidebar></Sidebar>
       </el-aside>
-      <el-main>Main</el-main>
+      <div class="my-main">
+        <TagsView></TagsView>
+        <el-main>
+            <AppMain></AppMain>
+        </el-main>
+      </div>
   </el-container>
   </el-container>
 </template>
 
 <script>
-import Sidebar from '@/views/layout/Sidebar'
-import Header from '@/views/layout/Header'
+import Sidebar from './Sidebar'
+import Header from './Header'
+import AppMain from './AppMain'
+import TagsView from './TagsView'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Sidebar
+    Sidebar,
+    AppMain,
+    TagsView
   }
 }
 </script>
@@ -39,6 +48,17 @@ export default {
   .el-main {
     background-color: #E9EEF3;
     color: #333;
+    padding: 10px;
+  }
+
+  .my-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 0;
   }
 
 </style>
